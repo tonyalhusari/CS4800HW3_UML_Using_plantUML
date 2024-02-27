@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class Folder {
+    - name: String
+    - subfolders: ArrayList<Folder>
+    - files: ArrayList<File>
+
+    + Folder()
+    + getName(): String
+    + setName(name: String): void
+    + removeSubfolder(subFolderName: String): void
+    + addSubfolder(subFolderName: String): void
+    + getSubfolder(subFolderName: String): Folder
+    + removeFile(file: File): boolean
+    + addFile(fileName: String): void
+    + toString(): String
+    + printFolderContents(): void
+}
+
+class File {
+    - name: String
+
+    + File(name: String)
+    + getName(): String
+    + setName(name: String): void
+    + toString(): String
+}
+
+Folder "1" o-- "   0..*" Folder
+Folder "1" *-- "0..*" File
+
+@enduml

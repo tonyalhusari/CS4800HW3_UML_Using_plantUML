@@ -1,0 +1,18 @@
+@startuml
+
+object "<u>ships[0]: Ship" as Ship
+Ship : shipName = "Titanic"
+Ship : yearBuilt = "March31st, 1909"
+
+
+object "<u>ships[1]: CruiseShip" as CruiseShip
+CruiseShip : shipName = "Titanic"
+CruiseShip : yearBuilt = "March31st,1909"
+CruiseShip : maxNumberPassengers = 100
+
+object "<u>ships[2]: CargoShip" as CargoShip
+CargoShip : shipName = "Titanic"
+CargoShip : yearBuilt = "September25th,2018"
+CargoShip : cargoCapacityInTonnage = 220940
+
+@enduml
